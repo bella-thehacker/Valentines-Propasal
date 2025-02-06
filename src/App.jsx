@@ -49,9 +49,19 @@ function App() {
             <div className="flex flex-col items-center justify-center h-screen mt-20">
               <img src="/heart-spin.gif" alt="Placeholder" className="rounded-full w-32 h-32 object-cover mb-10" />
               <h1 className="text-6xl font-bold text-center">Valentine's Proposal</h1>
-              <p className="text-2xl font-medium w-5xl mt-10">
+              <p className="text-2xl font-medium w-5xl mt-10 text-center">
                 Looking for a fun and adorable way to ask someone to be your Valentine? 🎮✨
               </p>
+
+              <div className='mr-50'>
+          <h3 className='text-xl mt-10 mb-5 text font-bold'>💌  How It Works:</h3>
+          <ul className='text-lg font-medium'>
+            <li className='mb-2'>💕  Type in your special someone's name.</li>
+            <li className='mb-2'>🎀  We will design a charming pixel-art Valentine’s proposal for you.</li>
+            <li className='mb-2'>😆  Watch as the <span className='font-bold'>"No"</span> button playfully dodges their clicks—because saying <span className='font-bold'>"Yes" is the only option!</span></li>
+            <li className='mb-2'>🕒  Your custom proposal will be delivered in **12 hours**.</li>
+          </ul>
+        </div>
 
               <h3 className="mt-10 font-light text-lg">
                 Ready to pop the question? Let’s make this Valentine’s Day unforgettable! 💘
