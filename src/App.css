@@ -1,0 +1,24 @@
+
+
+
+h1 {
+    font-family: "Pixelify Sans", serif;    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+    font-size: 300%;
+  }
+
+ 
+  
+  .pixel-button {
+    font-family: 'Pixelify', serif;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px #ff69b4;
+  }
+  
+  .pixel-button:hover {
+    box-shadow: none;
+    transform: translate(4px, 4px);
+  }
+  
