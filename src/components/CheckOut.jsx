@@ -43,15 +43,27 @@ const CheckOut = () => {
           </div>
         </div>
 
-        {paymentMethod && (
+        {paymentMethod === "mpesa" && (
+          <div className="mb-6 bg-gray-100 p-4 rounded-lg text-black">
+            <h2 className="text-2xl font-semibold mb-2">M-Pesa Payment Instructions:</h2>
+            <p className="text-lg mb-2">Send Ksh300 to:</p>
+            <p className="font-bold text-xl">📞 07-12-06-31-52</p>
+            <p className="mt-2 text-gray-600">Or use Pochi la Biashara:</p>
+            <p className="font-bold text-xl">Till Number: 07-12-06-31-52</p>
+            <p className="mt-4">Once done, contact us for confirmation.</p>
+            <button 
+  className="w-full mt-4 bg-blue-500 text-white py-3 rounded text-lg font-bold hover:bg-blue-700 transition duration-300"
+  onClick={() => navigate("/contact")}
+>
+  Still not sure? Contact a Developer
+</button>
+          </div>
+        )}
+
+        {paymentMethod === "paypal" && (
           <div className="mb-6">
-            <h2 className="text-2xl font-semibold mb-2">Enter Details:</h2>
-            <input
-              type="text"
-              placeholder={paymentMethod === "mpesa" ? "Enter M-Pesa Number" : "Enter PayPal Email"}
-              className="w-full p-3 border border-[#ffb7dd] rounded mb-4 text-lg"
-            />
-            <input type="text" placeholder="Your Name" className="w-full p-3 border border-[#ffb7dd] rounded text-lg" />
+            <h2 className="text-2xl font-semibold mb-2">Enter PayPal Details:</h2>
+            <input type="text" placeholder="Enter PayPal Email" className="w-full p-3 border border-[#ffb7dd] rounded mb-4 text-lg" />
           </div>
         )}
 

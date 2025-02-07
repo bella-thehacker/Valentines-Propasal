@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import CheckOut from "./components/CheckOut";
 import { Projects } from "./components/Projects";
+import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       {/* Routes should be placed inside a div wrapper to avoid overlapping */}
       <Routes>
         <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/contact" element={<Contact />} />
         <Route
           path="/"
           element={
