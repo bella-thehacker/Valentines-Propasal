@@ -8,7 +8,6 @@ import "./App.css";
 function App() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [timer, setTimer] = useState(12 * 60 * 60); // 12 hours in seconds
   const [formData, setFormData] = useState({
     yourName: "",
     recipientName: "",
@@ -17,15 +16,6 @@ function App() {
   });
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (submitted) {
-      const interval = setInterval(() => {
-        setTimer((prev) => (prev > 0 ? prev - 1 : 0));
-      }, 1000);
-      return () => clearInterval(interval);
-    }
-  }, [submitted]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -87,12 +77,7 @@ function App() {
               ) : loading ? (
                 // Show loading animation when submitted
                 <img src="/giphy.webp" alt="Loading..." className="w-20 h-20 mt-6" />
-              ) : (
-                // Show estimated delivery time after loading
-                <p className="mt-6 text-lg font-bold">
-                  Your proposal has been submitted! Estimated delivery: {Math.floor(timer / 3600)}h {Math.floor((timer % 3600) / 60)}m
-                </p>
-              )}
+              ) : null}
             </div>
           }
         />
