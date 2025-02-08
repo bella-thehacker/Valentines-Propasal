@@ -27,13 +27,15 @@ const CheckOut = () => {
         <div className="mb-6">
           <h2 className="text-2xl font-semibold mb-2">Choose Payment Method:</h2>
           <div className="flex justify-center gap-4">
-            <button
-              className={`flex items-center gap-2 px-6 py-3 rounded text-lg font-medium transition ${paymentMethod === "mpesa" ? "bg-[#ffb7dd] text-white" : "bg-white text-black border border-[#ffb7dd]"}`}
-              onClick={() => setPaymentMethod("mpesa")}
-            >
-              <img src="/mpesa.png" alt="mpesa logo" className="w-10" />
-              M-Pesa
-            </button>
+          <button
+  className={`w-full md:w-auto flex items-center justify-center gap-1 md:gap-2 px-6 py-3 rounded text-lg font-medium transition whitespace-nowrap ${
+    paymentMethod === "mpesa" ? "bg-[#ffb7dd] text-white" : "bg-white text-black border border-[#ffb7dd]"
+  }`}
+  onClick={() => setPaymentMethod("mpesa")}
+>
+  <img src="/mpesa.png" alt="mpesa logo" className="w-8 md:w-10" />
+  <span className="text-sm md:text-lg">M-Pesa</span>
+</button>
             <button
               className={`px-6 py-3 rounded text-lg font-medium transition flex items-center ${paymentMethod === "paypal" ? "bg-[#ffb7dd] text-white" : "bg-white text-black border border-[#ffb7dd]"}`}
               onClick={() => setPaymentMethod("paypal")}
